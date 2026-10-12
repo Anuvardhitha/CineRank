@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        CineRank - Movie Recommendation Engine
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+<body>
+
+    <nav class="navbar">
+
+        <div class="logo">
+            🎬 CineRank
+        </div>
+
+        <div class="search-box">
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search movies..."
+                onkeyup="handleSearch(event)"
+            >
+
+            <button onclick="searchMovies()">
+                Search
+            </button>
+
+        </div>
+
+    </nav>
+
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <p class="small-title">
+                PERSONALIZED MOVIE RECOMMENDATION ENGINE
+            </p>
+
+            <h1>
+                Find movies<br>
+                you'll love.
+            </h1>
+
+            <p>
+                CineRank combines data structures,
+                similarity analysis and ranking algorithms
+                to discover movies for you.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <section class="section">
+
+        <div class="section-header">
+
+            <h2 id="sectionTitle">
+                Search Movies
+            </h2>
+
+        </div>
+
+        <div
+            id="movieContainer"
+            class="movie-grid">
+        </div>
+
+    </section>
+
+
+    <section class="section">
+
+        <div class="section-header">
+
+            <h2>
+                🔥 Trending Now
+            </h2>
+
+        </div>
+
+        <div
+            id="trendingContainer"
+            class="movie-grid">
+        </div>
+
+    </section>
+
+
+    <section class="section">
+
+        <div class="section-header">
+
+            <h2>
+                🤖 Recommended For You
+            </h2>
+
+        </div>
+
+        <div
+            id="recommendationContainer"
+            class="movie-grid">
+        </div>
+
+    </section>
+
+
+    <section class="section">
+
+        <div class="section-header">
+
+            <h2>
+                🎬 Top 10 Movies by Genre
+            </h2>
+
+        </div>
+
+        <div id="genreContainer">
+        </div>
+
+    </section>
+
+
+    <div
+        id="movieModal"
+        class="modal"
+        onclick="closeModal(event)"
+    >
+
+        <div
+            class="modal-content"
+            onclick="event.stopPropagation()"
+        >
+
+            <button
+                class="close-modal"
+                onclick="closeMovieModal()"
+            >
+                ×
+            </button>
+
+            <img
+                id="modalPoster"
+                class="modal-poster"
+                src=""
+                alt="Movie Poster"
+            >
+
+            <div class="modal-info">
+
+                <h2 id="modalTitle">
+                    Movie Title
+                </h2>
+
+                <p id="modalMeta">
+                </p>
+
+                <p id="modalOverview">
+                </p>
+
+                <p id="modalCast">
+                </p>
+
+                <div
+                    id="modalActions"
+                    class="movie-actions"
+                >
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <footer>
+
+        <p>
+            © 2026 CineRank
+        </p>
+
+        <p>
+            Data Structures & Algorithms Project
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

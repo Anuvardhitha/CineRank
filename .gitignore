@@ -1,0 +1,22 @@
+
+# Secrets and environment configuration
+.env
+.env.*
+!.env.example
+*.secret
+secrets.properties
+
+# Java compiled output
+out/
+build/
+target/
+*.class
+
+# IDE and operating-system files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Logs and temporary files
+*.log
